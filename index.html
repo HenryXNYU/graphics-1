@@ -31,14 +31,14 @@ float D(vec2 p) {          // Unit sphere: return z value.
    return rr >= 1. ? 0. : sqrt(1. - rr);
 }
 
-float S(float x, float y) {         // create star grid
+float S(float x, float y) {         // Create star grid
    float a = x;
    float b = y;
    float d = a * a/ .005 *  b * b / .15 ;
    return  d >= 1. ? 0. : 1. - d;
 }
 
-float E(float x, float y) {         // create ellipse
+float E(float x, float y) {         // Create ellipse
    float a = x;
    float b = y;
    float d = a * a/ (.2 + .2 * sin(uTime))  +  b * b / (.1 + .1 * cos(uTime)) ;
